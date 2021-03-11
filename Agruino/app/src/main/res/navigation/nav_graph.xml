@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.acl.agruino_kotlin.fragment.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.acl.agruino_kotlin.fragment.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_keysFragment"
+            app:destination="@id/keysFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moistureFragment"
+        android:name="com.acl.agruino_kotlin.fragment.readValues.MoistureFragment"
+        android:label="fragment_moisture"
+        tools:layout="@layout/fragment_moisture" />
+    <fragment
+        android:id="@+id/keysFragment"
+        android:name="com.acl.agruino_kotlin.fragment.KeysFragment"
+        android:label="fragment_keys"
+        tools:layout="@layout/fragment_keys" >
+        <action
+            android:id="@+id/action_keysFragment_to_moistureFragment"
+            app:destination="@id/moistureFragment" />
+        <action
+            android:id="@+id/action_keysFragment_to_waterKeysFragment"
+            app:destination="@id/waterKeysFragment" />
+        <action
+            android:id="@+id/action_keysFragment_to_historyKeysFragment"
+            app:destination="@id/historyKeysFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/waterKeysFragment"
+        android:name="com.acl.agruino_kotlin.fragment.WaterKeysFragment"
+        android:label="fragment_water_keys"
+        tools:layout="@layout/fragment_water_keys" >
+        <action
+            android:id="@+id/action_waterKeysFragment_to_waterValuesFragment"
+            app:destination="@id/waterValuesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/waterValuesFragment"
+        android:name="com.acl.agruino_kotlin.fragment.readValues.water.WaterValuesFragment"
+        android:label="fragment_water_values"
+        tools:layout="@layout/fragment_water_values" />
+    <fragment
+        android:id="@+id/historyKeysFragment"
+        android:name="com.acl.agruino_kotlin.fragment.HistoryKeysFragment"
+        android:label="fragment_history_keys"
+        tools:layout="@layout/fragment_history_keys" >
+        <action
+            android:id="@+id/action_historyKeysFragment_to_historyValuesFragment"
+            app:destination="@id/historyValuesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyValuesFragment"
+        android:name="com.acl.agruino_kotlin.fragment.readValues.HistoryValuesFragment"
+        android:label="fragment_history_values"
+        tools:layout="@layout/fragment_history_values" />
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="com.acl.agruino_kotlin.fragment.FilterFragment"
+        android:label="fragment_filter"
+        tools:layout="@layout/fragment_filter" >
+        <action
+            android:id="@+id/action_filterFragment_to_historyValuesFragment"
+            app:destination="@id/historyValuesFragment" />
+    </fragment><action android:id="@+id/action_global_filterFragment" app:destination="@id/filterFragment"/>
+</navigation>

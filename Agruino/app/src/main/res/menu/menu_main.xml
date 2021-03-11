@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.dam.agruino.view.MainActivity">
+    <item
+        android:id="@+id/mnu_moisture"
+        android:title="@string/moisture"
+        />
+    <item
+        android:id="@+id/mnu_water"
+        android:title="@string/water"
+        />
+    <item
+        android:id="@+id/mnu_historical"
+        android:title="@string/historical"
+        />
+    <item
+        android:id="@+id/mnuExit"
+        android:title="@string/exit"
+        />
+</menu>
